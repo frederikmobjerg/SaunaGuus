@@ -1,0 +1,237 @@
+/* 🔤 Placeholder til din font */
+@font-face {
+  font-family: "bigbird";
+  src: url("fonts/TAYBigBird.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'bigbird', sans-serif;
+  background-color: white;
+  height: 100vh;
+  position: relative;
+}
+
+/* 🔳 Logo */
+.logo {
+      position: absolute;
+      top: 90px;       /* afstand fra toppen */
+      left: 50%;        /* midt på siden */
+      transform: translateX(-50%); /* justerer så logoet er præcist centreret */
+    }
+
+.logo img {
+  height: 80px; /* Justér efter behov */
+}
+
+.brand {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+/* Lokationer */
+.location {
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.location p {
+  margin: 5px 0;
+}
+.subscribe {
+  background: #3c303b;
+  color: #fffbea;
+  font-family: inherit;
+  font-size: 1.1rem;      /* større tekst */
+  letter-spacing: 0.12em;
+  border: none;
+  padding: 12px 32px;     /* større knap */
+  margin-top: 16px;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+/* Asymmetrisk placering */
+.london {
+  left: 300px;
+  top: 58%;
+  transform: translateY(-50%);
+}
+
+.newyork {
+  right: 200px;
+  top: 38%;
+  transform: translateY(-50%);
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 18px 12px;
+  border-radius: 10px;
+  min-width: 320px;
+  max-width: 90vw;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  
+}
+
+.modal-input {
+  width: 240px;
+  padding: 10px;
+  font-size: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 0;
+  text-align: center;
+  letter-spacing: 0.15em;
+  font-family: inherit;
+}
+
+.modal-subscribe {
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 32px;
+  transition: text-decoration 0.2s;
+  font-family: inherit;
+  letter-spacing: 0.15em;
+}
+.modal-subscribe:hover, .modal-subscribe:focus {
+  text-decoration: underline;
+}
+
+.modal-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.london-group {
+  position: absolute;
+  left: 150px; /* justér placering for London samlet */
+  top: 52%;
+  transform: translateY(-50%);
+}
+
+.london {
+  position: static; /* så den følger gruppen */
+}
+
+.london-image {
+  position: absolute;
+  left: 100px; /* justér afstand fra boksen */
+  top: -100px;  /* justér op/ned ift. boksen */
+  transform: rotate(-15deg);
+  width: 350px;
+  height: auto;
+     z-index: -1; /* billedet bagved */
+}
+
+.newyork-group {
+  position: absolute;
+  right: 150px; /* justér placering for NY samlet */
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+.newyork {
+  position: static;
+}
+
+.newyork-image {
+  position: absolute;
+  right: 120px;
+  top: -160px;
+  transform: rotate(-15deg);
+  width: 380px;
+  height: auto;
+    z-index: -1; /* billedet bagved */
+}
+.centered-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered-links > div {
+  font-family: inherit;
+  font-size: 1.3rem;
+  margin: 16px 0;
+  letter-spacing: 0.1em;
+  color: black;
+}
+
+.about {
+  position: absolute;
+  left: 50%;
+  top: 110%; /* justér placering for ABOUT */
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.contact {
+  position: absolute;
+  left: 50%;
+  top: 80%; /* justér placering for CONTACT */
+  transform: translateX(-50%);
+  text-align: center;
+  color: #3c303b; 
+}
+
+.privacy {
+  position: absolute;
+  left: 50%;
+  top: 125%; /* justér placering for PRIVACY */
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+
+/* Farver fra dit billede */
+.color-blue   { background: #97bfc5; }
+.color-red    { background: #c55a48; }
+.color-dark   { background: #3c303b; }
+.color-cream  { background: #fffbea; }
+
+/* Eksempel på brug til knapper */
+.subscribe {
+  background: #3c303b; /* mørk farve */
+  color: #fffbea;      /* lys tekst */
+  /* ...resten af din styling... */
+}
+
+/* Eksempel på brug til baggrund */
+body {
+  background-color: #fffbea;
+}
