@@ -27,6 +27,12 @@ body {
   height: 80px; /* Justér efter behov */
 }
 
+.cs {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  }
 
 /* Farver fra dit billede */
 .color-blue   { background: #97bfc5; }
