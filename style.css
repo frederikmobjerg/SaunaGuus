@@ -38,7 +38,7 @@ body {
   color: #3c303b; /* mørk farve */
 }
 .comingsoon{
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 60%;
   transform: translateX(-50%);
