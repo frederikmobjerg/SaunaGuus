@@ -15,10 +15,9 @@ body {
   position: relative;
 }
 
-/* 🔳 Logo */
 .logo {
       position: absolute;
-      top: 70%;       /* afstand fra toppen */
+      top: 120px;       /* afstand fra toppen */
       left: 50%;        /* midt på siden */
       transform: translateX(-50%); /* justerer så logoet er præcist centreret */
     }
