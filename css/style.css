@@ -1,10 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;              /* fylder hele skærmen */
-  display: flex;              /* aktiverer flexbox */
-  justify-content: center;    /* centrerer horisontalt */
-  align-items: center;        /* centrerer lodret */
+  height: 100vh;               /* fylder hele skærmen */
+  display: flex;               /* aktiverer flexbox */
+  justify-content: center;     /* centrerer horisontalt */
+  align-items: center;         /* centrerer lodret */
   background-color: #fffbea;
   font-family: 'bigbird', sans-serif;
+}
+
+.logo {
+  /* fjern alle position/top/left/transform regler */
+}
+
+.logo img {
+  height: 80px;                /* justér efter behov */
 }
