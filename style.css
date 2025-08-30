@@ -26,17 +26,6 @@ body {
 .logo img {
   height: 80px; /* Justér efter behov */
 }
-
-.brand {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 18px;
-  margin-bottom: 40px;
-}
 .contact {
   position: absolute;
   left: 50%;
