@@ -29,7 +29,7 @@ body {
 
 .about {
   left: 50%;
-  top: 50%; /* justér placering for ABOUT */
+  top: 0%; /* justér placering for ABOUT */
   transform: translateX(-50%);
   text-align: center;
 }
