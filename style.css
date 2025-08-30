@@ -1,4 +1,4 @@
-/* 🔤 Placeholder til din font */
+/* 🔤 Import af specialfont */
 @font-face {
   font-family: "bigbird";
   src: url("fonts/TAYBigBird.otf") format("opentype");
@@ -6,49 +6,50 @@
   font-style: normal;
 }
 
+/* 🌐 Grundopsætning */
 body {
   margin: 0;
   padding: 0;
   font-family: 'bigbird', sans-serif;
-  background-color: white;
+  background-color: #fffbea; /* cream-farve */
   height: 100vh;
   position: relative;
 }
 
+/* 🎯 Centreret logo */
 .logo {
-      position: absolute;
-      top: 50%;       /* afstand fra toppen */
-      left: 50%;        /* midt på siden */
-      transform: translateX(-50%); /* justerer så logoet er præcist centreret */
-    }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .logo img {
   height: 80px; /* Justér efter behov */
 }
+
+/* 📬 CONTACT-sektion */
 .contact {
   position: absolute;
   left: 50%;
-  top: 80%; /* justér placering for CONTACT */
+  top: 80%;
   transform: translateX(-50%);
   text-align: center;
-  color: #3c303b; 
+  color: #3c303b; /* mørk farve */
 }
 
-
-/* Farver fra dit billede */
+/* 🎨 Farvetema */
 .color-blue   { background: #97bfc5; }
 .color-red    { background: #c55a48; }
 .color-dark   { background: #3c303b; }
 .color-cream  { background: #fffbea; }
 
-/* Eksempel på brug til knapper */
+/* 📩 Knap-styling */
 .subscribe {
-  background: #3c303b; /* mørk farve */
-  color: #fffbea;      /* lys tekst */
-  /* ...resten af din styling... */
-}
-
-/* Eksempel på brug til baggrund */
-body {
-  background-color: #fffbea;
+  background: #3c303b;
+  color: #fffbea;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
