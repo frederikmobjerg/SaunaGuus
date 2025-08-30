@@ -1,32 +1,47 @@
-/* Grundlæggende styling */
-body, html {
+/* 🔤 Placeholder til din font */
+@font-face {
+  font-family: "bigbird";
+  src: url("fonts/TAYBigBird.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Arial', sans-serif;
-  background-color: #fffbea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: 'bigbird', sans-serif;
+  background-color: white;
+  height: 100vh;
+  position: relative;
+}
+
+/* 🔳 Logo */
+.logo {
+      position: absolute;
+      top: 40%;       /* afstand fra toppen */
+      left: 50%;        /* midt på siden */
+      transform: translateX(-50%); /* justerer så logoet er præcist centreret */
+    }
+
+.logo img {
+  height: 80px; /* Justér efter behov */
+}
+
+.about {
+  position: absolute;
+  left: 50%;
+  top: 50%; /* justér placering for ABOUT */
+  transform: translateX(-50%);
   text-align: center;
 }
 
-/* Container til at holde logo og tekst */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/* Farver fra dit billede */
+.color-blue   { background: #97bfc5; }
+.color-red    { background: #c55a48; }
+.color-dark   { background: #3c303b; }
+.color-cream  { background: #fffbea; }
 
-/* Styling af logo */
-.logo img {
-  height: 80px;
-  margin-bottom: 20px;
-}
-
-/* Styling af "Coming Soon"-teksten */
-.about p {
-  font-size: 24px;
-  color: #3c303b;
+/* Eksempel på brug til baggrund */
+body {
+  background-color: #fffbea;
 }
