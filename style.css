@@ -37,6 +37,14 @@ body {
   text-align: center;
   color: #3c303b; /* mørk farve */
 }
+.comingsoon{
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #3c303b; /* mørk farve */
+}
 
 /* 🎨 Farvetema */
 .color-blue   { background: #97bfc5; }
