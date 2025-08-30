@@ -13,6 +13,7 @@ body {
   background-color: white;
   height: 100vh;
   position: relative;
+  background-color: #fffbea;
 }
 
 /* 🔳 Logo */
@@ -40,8 +41,3 @@ body {
 .color-red    { background: #c55a48; }
 .color-dark   { background: #3c303b; }
 .color-cream  { background: #fffbea; }
-
-/* Eksempel på brug til baggrund */
-body {
-  background-color: #fffbea;
-}
