@@ -19,11 +19,11 @@ body {
 
 /* Wrapper der centrerer alt indhold */
 .center-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+      position: absolute;
+      top: 90px;       /* afstand fra toppen */
+      left: 50%;        /* midt på siden */
+      transform: translateX(-50%); /* justerer så logoet er præcist centreret */
+    }
 
 /* Logo-styling */
 .logo img {
@@ -37,7 +37,6 @@ body {
   color: #3c303b;
   font-size: 18px;
 }
-
 
 /* 🎨 Farvetema */
 .color-blue   { background: #97bfc5; }
