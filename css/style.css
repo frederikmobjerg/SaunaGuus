@@ -18,7 +18,7 @@ body {
 /* 🔳 Logo */
 .logo {
       position: absolute;
-      top: 60%;       /* afstand fra toppen */
+      top: 500px;       /* afstand fra toppen */
       left: 50%;        /* midt på siden */
       transform: translateX(-50%); /* justerer så logoet er præcist centreret */
     }
@@ -29,9 +29,10 @@ body {
 
 .cs {
   position: absolute;
-  top: 5%;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
   }
 
 /* Farver fra dit billede */
