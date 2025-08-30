@@ -32,11 +32,12 @@ body {
 }
 
 /* Tekst under logo */
-.text p {
-  margin: 5px 0;
-  color: #3c303b;
-  font-size: 18px;
-}
+.text {
+      position: absolute;
+      top: 90px;       /* afstand fra toppen */
+      left: 50%;        /* midt på siden */
+      transform: translateX(-50%); /* justerer så logoet er præcist centreret */
+    }
 
 /* 🎨 Farvetema */
 .color-blue   { background: #97bfc5; }
