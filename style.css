@@ -6,45 +6,38 @@
   font-style: normal;
 }
 
-/* 🌐 Grundopsætning */
 body {
   margin: 0;
   padding: 0;
   font-family: 'bigbird', sans-serif;
-  background-color: #fffbea; /* cream-farve */
+  background-color: #fffbea;
   height: 100vh;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 🎯 Centreret logo */
-.logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Wrapper der centrerer alt indhold */
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+/* Logo-styling */
 .logo img {
   height: 80px; /* Justér efter behov */
+  margin-bottom: 20px;
 }
 
-/* 📬 CONTACT-sektion */
-.contact {
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: #3c303b; /* mørk farve */
+/* Tekst under logo */
+.text p {
+  margin: 5px 0;
+  color: #3c303b;
+  font-size: 18px;
 }
-.comingsoon{
-  position: fixed;
-  left: 50%;
-  top: 60%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: #3c303b; /* mørk farve */
-}
+
 
 /* 🎨 Farvetema */
 .color-blue   { background: #97bfc5; }
