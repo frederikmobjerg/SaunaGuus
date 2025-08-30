@@ -1,4 +1,4 @@
-/* 🔤 Font (husk at tjek stien til fonten) */
+/* 🔤 Placeholder til din font */
 @font-face {
   font-family: "bigbird";
   src: url("fonts/TAYBigBird.otf") format("opentype");
@@ -9,29 +9,39 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
   font-family: 'bigbird', sans-serif;
-  background-color: #fffbea;
-
-  /* Flexbox til centering */
-  display: flex;
-  justify-content: center; /* centrerer lodret */
-  align-items: center;     /* centrerer horisontalt */
-  text-align: center;
+  background-color: white;
+  height: 100vh;
+  position: relative;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;  /* Logo og tekst oven på hinanden */
-  align-items: center;
-}
+/* 🔳 Logo */
+.logo {
+      position: absolute;
+      top: 40%;       /* afstand fra toppen */
+      left: 50%;        /* midt på siden */
+      transform: translateX(-50%); /* justerer så logoet er præcist centreret */
+    }
 
 .logo img {
-  height: 80px;      /* Justér efter behov */
-  margin-bottom: 20px; /* Afstand mellem logo og tekst */
+  height: 80px; /* Justér efter behov */
 }
 
 .about {
-  font-size: 24px;
-  color: #3c303b;
+  position: absolute;
+  left: 50%;
+  top: 50%; /* justér placering for ABOUT */
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Farver fra dit billede */
+.color-blue   { background: #97bfc5; }
+.color-red    { background: #c55a48; }
+.color-dark   { background: #3c303b; }
+.color-cream  { background: #fffbea; }
+
+/* Eksempel på brug til baggrund */
+body {
+  background-color: #fffbea;
 }
