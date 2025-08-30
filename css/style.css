@@ -12,12 +12,12 @@ body {
   font-family: 'bigbird', sans-serif;
   background-color: fffbea;
   height: 20vh;
-  position: absolute;
+  position: relative;
 }
 
 /* 🔳 Logo */
 .logo {
-      position: absolute;
+      position: relative;
       top: 40%;       /* afstand fra toppen */
       left: 50%;        /* midt på siden */
       transform: translateX(-50%); /* justerer så logoet er præcist centreret */
@@ -28,6 +28,7 @@ body {
 }
 
 .about {
+  position: fixed;
   left: 50%;
   top: 0%; /* justér placering for ABOUT */
   transform: translateX(-50%);
