@@ -21,12 +21,7 @@ body {
       top: 40%;       /* afstand fra toppen */
       left: 50%;        /* midt på siden */
       transform: translateX(-50%); /* justerer så logoet er præcist centreret */
-    }
-
-.logo img {
-  height: 200px; /* Justér efter behov */
 }
-
 .about {
   position: fixed;
   left: 50%;
