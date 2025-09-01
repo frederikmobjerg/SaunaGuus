@@ -215,7 +215,7 @@ body {
 }
 
 .ourspark-section {
-  top: 12%;
+  top: 20%;
 }
 
 .about,
@@ -241,7 +241,7 @@ body {
   display: block;
   margin: 32px auto 0 auto;
   text-align: center;
-  top: 15%;
+  top: 20%;
 }
 
 .logo2 img {
@@ -259,7 +259,7 @@ body {
 }
 
 .ethos-section {
-  top: 20%;
+  top: 22%;
 }
 
 .privacy-section {
@@ -388,4 +388,14 @@ body {
     top: auto;
     transform: none;
   }
+}
+
+.contact a {
+    color: #3c303b;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.contact a:hover {
+    opacity: 0.7;
 }
