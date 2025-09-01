@@ -203,7 +203,8 @@ body {
 
 /* Content Sections */
 .about-section,
-.ourspark-section {
+.ourspark-section,
+.privacy-section {
   width: 40%;
   margin: auto;
   text-align: justify;
@@ -250,8 +251,7 @@ body {
   margin: 0 auto;
 }
 
-.ethos-section,
-.privacy-section {
+.ethos-section, {
   width: 40%;
   margin: auto;
   text-align: center;
