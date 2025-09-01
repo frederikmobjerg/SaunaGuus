@@ -203,8 +203,7 @@ body {
 
 /* Content Sections */
 .about-section,
-.ourspark-section,
-.privacy-section {
+.ourspark-section {
   width: 40%;
   margin: auto;
   text-align: justify;
@@ -216,7 +215,7 @@ body {
 }
 
 .ourspark-section {
-  top: 30%;
+  top: 20%;
 }
 
 .about,
@@ -251,19 +250,25 @@ body {
   margin: 0 auto;
 }
 
-.ethos-section, {
+.ethos-section {
   width: 40%;
   margin: auto;
   text-align: center;
   position: relative;
 }
 
+.privacy-section {
+  width: 40%;
+  margin: auto;
+  text-align: justify; /* Ændret fra center til justify */
+  position: relative;
+}
 .ethos-section {
   top: 22%;
 }
 
 .privacy-section {
-  top: 23%;
+  top: 35%;
 }
 
 .ethos,
@@ -282,6 +287,10 @@ body {
 .ethos-text p,
 .privacy-text p {
   margin: 0;
+}
+
+.privacy-text {
+  text-align: justify;
 }
 
 .contact {
