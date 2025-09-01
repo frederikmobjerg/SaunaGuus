@@ -134,3 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+subscribeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    console.log('Project:', btn.getAttribute('data-project')); // Debug
+    currentProject = btn.getAttribute('data-project');
+    modal.style.display = 'flex';
+    modalInput.value = "";
+  });
+});
