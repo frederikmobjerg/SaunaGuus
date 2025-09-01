@@ -1,4 +1,3 @@
-/* 🔤 Placeholder til din font */
 @font-face {
   font-family: "bigbird";
   src: url("fonts/TAYBigBird.otf") format("opentype");
@@ -6,14 +5,25 @@
   font-style: normal;
 }
 
+/* Base Styles */
+* {
+  cursor: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'bigbird', sans-serif;
+  background-color: #fffbea;
+  height: 100vh;
+  position: relative;
+}
+
+/* Intro Overlay */
 #intro-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: #fffbea;
-  /* eller transparent */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,37 +37,15 @@
   object-fit: contain;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'bigbird', sans-serif;
-  background-color: #fffbea;
-  height: 100vh;
-  position: relative;
-  cursor: none !important;
-}
-
-input,
-textarea,
-button,
-select {
-  cursor: none !important;
-}
-
-/* 🔳 Logo */
+/* Logo */
 .logo {
-  position: absolute;
-  top: 5%;
-  /* afstand fra toppen */
-  left: 50%;
-  /* midt på siden */
-  transform: translateX(-50%);
-  /* justerer så logoet er præcist centreret */
+  position: relative;
+  text-align: center;
+  margin-top: 10vh;
 }
 
 .logo img {
-  height: 80px;
-  /* Justér efter behov */
+  height: 60px;
 }
 
 .brand {
@@ -71,9 +59,18 @@ select {
   margin-bottom: 40px;
 }
 
-/* Lokationer */
+
+/* Coming Soon */
+.coming-soon {
+  position: relative;
+  text-align: center;
+  color: #3c303b;
+  font-size: 1.2rem;
+  margin-top: 2vh;
+}
+
+/* Locations */
 .location {
-  position: absolute;
   width: 200px;
   text-align: center;
   font-size: 30px;
@@ -83,43 +80,72 @@ select {
   margin: 5px 0;
 }
 
+/* Locations Container */
+.locations-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -60vh;
+}
+
+.london-group {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-right: 50%;
+  margin-top: 0vh;
+}
+
+.london-image {
+  transform: rotate(-15deg);
+  width: 250px;
+  height: auto;
+  margin-bottom: -200px;
+  margin-left: 300px;
+  z-index: -1;
+}
+
+.newyork-group {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-left: 50%;
+  margin-top: 0vh;
+}
+
+.newyork-image {
+  transform: rotate(-15deg);
+  width: 280px;
+  height: auto;
+  margin-bottom: -360px;
+  margin-right: 260px;
+  z-index: -1;
+}
+
+/* Buttons */
 .subscribe {
   background: #3c303b;
   color: #fffbea;
   font-family: inherit;
   font-size: 0.9rem;
-  /* mindre tekst */
   letter-spacing: 0.1em;
   border: none;
   padding: 8px 20px;
-  /* mindre knap */
   margin-top: 12px;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
   display: inline-block;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-  cursor: pointer;
 }
 
-/* Asymmetrisk placering */
-.london {
-  left: 300px;
-  top: 58%;
-  transform: translateY(-50%);
-}
-
-.newyork {
-  right: 200px;
-  top: 38%;
-  transform: translateY(-50%);
-}
-
+/* Modal */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -139,7 +165,6 @@ select {
   align-items: center;
   position: relative;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-
 }
 
 .modal-input {
@@ -154,9 +179,13 @@ select {
   font-family: inherit;
 }
 
+.modal-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .modal-subscribe {
   font-size: 0.9rem;
-  cursor: pointer;
   user-select: none;
   background: none;
   border: none;
@@ -172,229 +201,133 @@ select {
   text-decoration: underline;
 }
 
-.modal-input:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.london-group {
-  position: absolute;
-  left: 400px;
-  /* justér placering for London samlet */
-  top: 58%;
-  transform: translateY(-50%);
-}
-
-.london {
-  position: static;
-  /* så den følger gruppen */
-}
-
-.london-image {
-  position: absolute;
-  left: 100px;
-  /* justér afstand fra boksen */
-  top: -100px;
-  /* justér op/ned ift. boksen */
-  transform: rotate(-15deg);
-  width: 250px;
-  height: auto;
-  z-index: -1;
-  /* billedet bagved */
-}
-
-.newyork-group {
-  position: absolute;
-  right: 350px;
-  /* justér placering for NY samlet */
-  top: 40%;
-  transform: translateY(-50%);
-}
-
-.newyork {
-  position: static;
-}
-
-.newyork-image {
-  position: absolute;
-  right: 110px;
-  top: -160px;
-  transform: rotate(-15deg);
-  width: 280px;
-  height: auto;
-  z-index: -1;
-  /* billedet bagved */
-}
-
-.coming-soon {
-  position: absolute;
-  left: 50%;
-  top: 14%;
-  /* justér så den er under logoet */
-  transform: translateX(-50%);
-  text-align: center;
-  color: #3c303b;
-  z-index: 10;
-  font-size: 1.2rem;
-}
-
-.about-section {
-  width: 40%;
-  margin: auto;
-  text-align: justify;
-  position: relative;
-  /* nu virker top */
-  top: 100%;
-  /* flyt 150px ned */
-}
-
-
-.about {
-  text-align: center;
-  /* centrer overskriften */
-  margin-bottom: 20px;
-  /* spacing mellem ABOUT og teksten */
-}
-
-.about p {
-  font-weight: normal;
-  /* så ABOUT står lidt mere fremhævet */
-  font-size: 18px;
-  letter-spacing: 2px;
-  /* giver lidt luft mellem bogstaver */
-}
-
-.about-text p {
-  margin: 0;
-  /* fjern ekstra margin, så spacing styres via .about */
-}
-
-.about-section {
-  width: 40%;
-  margin: auto;
-  text-align: justify;
-  position: relative;
-  /* nu virker top */
-  top: 100%;
-  /* flyt 150px ned */
-}
-
-
-.ourspark {
-  text-align: center;
-  /* centrer overskriften */
-  margin-bottom: 20px;
-  /* spacing mellem ABOUT og teksten */
-}
-
-.ourspark p {
-  font-weight: normal;
-  /* så ABOUT står lidt mere fremhævet */
-  font-size: 18px;
-  letter-spacing: 2px;
-  /* giver lidt luft mellem bogstaver */
-}
-
-.spark-text p {
-  margin: 0;
-  /* fjern ekstra margin, så spacing styres via .about */
-}
-
+/* Content Sections */
+.about-section,
 .ourspark-section {
   width: 40%;
   margin: auto;
   text-align: justify;
   position: relative;
-  /* nu virker top */
-  top: 100%;
-  /* flyt 150px ned */
 }
 
-.ethos {
+.about-section {
+  top: 20%;
+}
+
+.ourspark-section {
+  top: 12%;
+}
+
+.about,
+.ourspark {
   text-align: center;
-  /* centrer overskriften */
   margin-bottom: 20px;
-  /* spacing mellem ABOUT og teksten */
 }
 
-.ethos p {
+.about p,
+.ourspark p {
   font-weight: normal;
-  /* så ABOUT står lidt mere fremhævet */
   font-size: 18px;
   letter-spacing: 2px;
-  /* giver lidt luft mellem bogstaver */
 }
 
-.ethos-text p {
+.about-text p,
+.spark-text p {
   margin: 0;
-  /* fjern ekstra margin, så spacing styres via .about */
+}
+
+.logo2 {
+  position: relative;
+  display: block;
+  margin: 32px auto 0 auto;
+  text-align: center;
+  top: 15%;
+}
+
+.logo2 img {
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ethos-section,
+.privacy-section {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  position: relative;
 }
 
 .ethos-section {
-  width: 40%;
-  margin: auto;
+  top: 20%;
+}
+
+.privacy-section {
+  top: 23%;
+}
+
+.ethos,
+.privacy {
   text-align: center;
-  position: relative;
-  /* nu virker top */
-  top: 100%;
-  /* flyt 150px ned */
+  margin-bottom: 20px;
+}
+
+.ethos p,
+.privacy p {
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.ethos-text p,
+.privacy-text p {
+  margin: 0;
 }
 
 .contact {
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  /* justér placering for CONTACT */
-  transform: translateX(-50%);
+  position: relative;
   text-align: center;
   color: #3c303b;
+  margin-top: 20vh;
 }
 
-.privacy {
-  width: 40%;
-  margin: auto;
-  text-align: center;
-  position: relative;
-  /* nu virker top */
-  top: 100%;
-  /* flyt 150px ned */
-}
+/* Utility Classes */
+.color-blue { color: #97bfc5; }
+.color-red { color: #c55a48; }
+.color-dark { background: #3c303b; }
+.color-cream { background: #fffbea; }
 
-
-/* Farver fra dit billede */
-.color-blue {
-  color: #97bfc5;
-}
-
-.color-red {
-  color: #c55a48;
-}
-
-.color-dark {
-  background: #3c303b;
-}
-
-.color-cream {
+.custom-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fffbea;
+  color: #3c303b;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-size: 1.1rem;
+  z-index: 99999;
+  text-align: center;
 }
 
-/* Eksempel på brug til knapper */
-.subscribe {
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
   background: #3c303b;
-  /* mørk farve */
-  color: #fffbea;
-  /* lys tekst */
-  /* ...resten af din styling... */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 199999;
+  transform: translate(-50%, -50%);
 }
 
-/* Eksempel på brug til baggrund */
-body {
-  background-color: #fffbea;
-}
-
+/* Mobile Responsive */
 @media (max-width: 600px) {
-
-  /* Logo */
   .logo {
     position: static;
     margin: 24px auto 0 auto;
@@ -406,7 +339,6 @@ body {
     height: 60px;
   }
 
-  /* Locations grupperet vertikalt */
   .london-group,
   .newyork-group {
     position: static;
@@ -432,7 +364,6 @@ body {
     z-index: 0;
   }
 
-  /* Modal */
   .modal-content {
     min-width: 0;
     width: 90vw;
@@ -444,49 +375,17 @@ body {
     max-width: 300px;
   }
 
-  /* Centreret links og info */
-  .centered-links,
   .about,
+  .ourspark,
+  .ethos,
   .contact,
   .privacy {
     position: static;
     margin: 16px auto;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     left: auto;
     top: auto;
     transform: none;
   }
-}
-
-/* Tilføj eventuelt flere media queries for andre skærmstørrelser */
-
-.custom-message {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fffbea;
-  color: #3c303b;
-  padding: 24px 32px;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
-  font-family: inherit;
-  font-size: 1.1rem;
-  z-index: 99999;
-  text-align: center;
-}
-
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  background: #3c303b;
-  /* vælg din farve */
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 199999;
-  transform: translate(-50%, -50%);
 }
