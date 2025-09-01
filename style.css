@@ -389,3 +389,13 @@ body {
     transform: none;
   }
 }
+
+.contact a {
+    color: #3c303b;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.contact a:hover {
+    opacity: 0.7;
+}
