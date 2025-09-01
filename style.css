@@ -5,7 +5,6 @@
   font-style: normal;
 }
 
-/* Base Styles */
 * {
   cursor: none !important;
 }
@@ -19,7 +18,6 @@ body {
   position: relative;
 }
 
-/* Intro Overlay */
 #intro-overlay {
   position: fixed;
   inset: 0;
@@ -37,7 +35,6 @@ body {
   object-fit: contain;
 }
 
-/* Logo */
 .logo {
   position: relative;
   text-align: center;
@@ -59,8 +56,6 @@ body {
   margin-bottom: 40px;
 }
 
-
-/* Coming Soon */
 .coming-soon {
   position: relative;
   text-align: center;
@@ -69,7 +64,6 @@ body {
   margin-top: 2vh;
 }
 
-/* Locations */
 .location {
   width: 200px;
   text-align: center;
@@ -80,7 +74,6 @@ body {
   margin: 5px 0;
 }
 
-/* Locations Container */
 .locations-container {
   position: relative;
   width: 100%;
@@ -126,7 +119,6 @@ body {
   z-index: -1;
 }
 
-/* Buttons */
 .subscribe {
   background: #3c303b;
   color: #fffbea;
@@ -142,7 +134,6 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
 }
 
-/* Modal */
 .modal {
   position: fixed;
   inset: 0;
@@ -201,7 +192,6 @@ body {
   text-decoration: underline;
 }
 
-/* Content Sections */
 .about-section,
 .ourspark-section {
   width: 40%;
@@ -291,7 +281,6 @@ body {
   margin-top: 20vh;
 }
 
-/* Utility Classes */
 .color-blue { color: #97bfc5; }
 .color-red { color: #c55a48; }
 .color-dark { background: #3c303b; }
@@ -326,7 +315,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Mobile Responsive */
 @media (max-width: 600px) {
   .logo {
     position: static;
