@@ -96,7 +96,7 @@ body {
   flex-direction: column-reverse;
   align-items: center;
   margin-right: 50%;
-  margin-top: 0vh;
+  margin-top: 15vh;
 }
 
 .london-image {
@@ -215,7 +215,7 @@ body {
 }
 
 .ourspark-section {
-  top: 20%;
+  top: 23%;
 }
 
 .about,
