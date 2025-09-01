@@ -4,8 +4,8 @@
 <head>
   <link rel="icon" href="logos/uuu.png" type="image/x-icon">
   <meta charset="UTF-8">
-  <title>SAUNAGUUS</title>
-  <link rel="stylesheet" href="style.css">
+  <title>SAUNA GUUS</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -21,9 +21,44 @@
   </div>
 
   <div id="custom-message" class="custom-message" style="display:none;"></div>
-
+<!--
   <div class="coming-soon">
     <p>...coming soon...</p>
+  </div>
+-->
+  <div class="newyork-group">
+    <div class="location newyork">
+      <p>NEW YORK</p>
+
+      <button class="subscribe" data-project="newyork">SUBSCRIBE</button>
+    </div>
+    <img src="images/newyork map.png" alt="New York billede" class="newyork-image">
+  </div>
+
+    <div class="london-group">
+    <div class="location london">
+      <p>LONDON</p>
+
+      <button class="subscribe" data-project="london">SUBSCRIBE</button>
+    </div>
+    <img src="images/london map.png" alt="London billede" class="london-image">
+  </div>
+
+  <div id="subscribeModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <input type="email" placeholder="ENTER EMAIL" class="modal-input" style="font-family: inherit;"
+        onfocus="this.placeholder=''" onblur="this.placeholder='ENTER EMAIL'">
+      <div class="modal-subscribe" tabindex="0" role="button"
+        style="font-family: inherit; margin-top: 24px; text-align: center;">
+        SUBMIT
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <p>newyork@saunaguus.io</p>
+    <p>london@saunaguus.io</p>
+    <p>@saunaguus</p>
   </div>
 
   <div class="about-section">
@@ -34,12 +69,18 @@
     <div class="about-text">
       <p>
         Founded by three childhood friends, SaunaGuus was born from a passion for transforming
-        Copenhagen’s harsh, dark winters into moments of warmth, connection, and renewal.
+        harsh, dark winters into moments of warmth, connection, and renewal.
         <br><br>
         In Denmark, we’ve always had the sauna — a place to warm the body and clear the mind.
         But it wasn’t until we discovered the power of sharing that experience in community that
-        everything changed. Cold days no longer kept us apart; they drew us together.
-        As the days grew colder and shorter, winter transformed from isolation into celebration.
+        everything changed.
+        <br><br>
+        Over the last seven years we’ve facilitated more than 800 sessions for nearly 20,000 people
+        — guiding them into heat, breath, and renewal. With each gathering, our belief in the ritual
+        only deepened.
+        <br><br>
+        Cold days no longer kept us apart; they drew us together. As the days grew colder and
+        shorter, winter transformed from isolation into celebration.
         <br><br>
         Through SaunaGuus, we now look forward to the cold — even in the darkest months.
       </p>
@@ -69,6 +110,10 @@
         reconnect — stripped of noise, stripped of demand.
       </p>
     </div>
+  </div>
+
+  <div class="logo2">
+    <img src="logos/3xuuu.png" alt="logo2">
   </div>
 
   <div class="ethos-section">
@@ -113,45 +158,86 @@
     </div>
   </div>
 
-
-
-  <div class="contact">
-    <p>newyork@saunaguus.io</p>
-    <p>london@saunaguus.io</p>
-    <p>+44 20 7946 0958</p>
-    <p>@saunaguus</p>
-  </div>
-
-  <div class="privacy">
-    <p>PRIVACY</p>
-  </div>
-
-  <div class="london-group">
-    <div class="location london">
-      <p>LONDON</p>
-
-      <button class="subscribe" data-project="london">SUBSCRIBE</button>
+  <div class="privacy-section">
+    <div class="privacy">
+      <p>PRIVACY</p>
     </div>
-    <img src="images/ChatGPT Image 30. aug. 2025, 18.54.11.png" alt="London billede" class="london-image">
-  </div>
 
-  <div class="newyork-group">
-    <div class="location newyork">
-      <p>NEW YORK</p>
-
-      <button class="subscribe" data-project="newyork">SUBSCRIBE</button>
-    </div>
-    <img src="images/ChatGPT Image 30. aug. 2025, 18.54.09.png" alt="New York billede" class="newyork-image">
-  </div>
-
-  <div id="subscribeModal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <input type="email" placeholder="ENTER EMAIL" class="modal-input" style="font-family: inherit;"
-        onfocus="this.placeholder=''" onblur="this.placeholder='ENTER EMAIL'">
-      <div class="modal-subscribe" tabindex="0" role="button"
-        style="font-family: inherit; margin-top: 24px; text-align: center;">
-        SUBMIT
-      </div>
+    <div class="privacy-text">
+      <p>
+        Privacy Policy
+        Effective Date: September 1, 2025
+        <br><br>
+        At SaunaGuus, we respect your privacy and are committed to protecting your personal data. This Privacy Policy
+        explains how we collect, use, and safeguard the information you provide when visiting our website.
+        <br><br>
+        Information We Collect
+        - Newsletter subscription: When you subscribe to our newsletter, we collect your email address.
+        - Contact forms: If you contact us via our website forms, your message and personal details (such as name and
+        email) will be processed securely.
+        - Technical information: We may collect limited technical data (such as IP address, cookies, or browser type) to
+        ensure website security, functionality, and improvements.
+        <br><br>
+        How We Use Your Information
+        We use your personal data to:
+        - Send you newsletters and updates about SaunaGuus.
+        - Respond to your inquiries sent via our contact form.
+        - Share relevant information about events, offers, or activities.
+        - Ensure the security, functionality, and proper operation of our website.
+        <br><br>
+        We do not sell, rent, or trade your personal data with third parties. Data may, however, be shared with trusted
+        service providers who help us operate the website and deliver services, such as hosting, email, and security/CDN
+        services.
+        <br><br>
+        Third-Party Services
+        Some of these service providers may process data outside the EU/EEA. In such cases, appropriate safeguards are
+        in place in line with GDPR requirements, including the EU–US Data Privacy Framework where applicable.
+        <br><br>
+        Cookies
+        Our website may use cookies to improve your browsing experience and to ensure security and performance. You can
+        disable cookies in your browser settings at any time.
+        <br><br>
+        Data Security
+        We take appropriate technical and organizational measures to keep your personal information safe and prevent
+        unauthorized access, loss, or misuse.
+        <br><br>
+        Your Rights
+        In line with the General Data Protection Regulation (GDPR), you have the right to:
+        - Access the personal data we hold about you.
+        - Request correction or deletion of your data.
+        - Withdraw your consent at any time (for example, by unsubscribing from our newsletter).
+        <br><br>
+        Our Ethos
+        In a world that demands constant motion, SaunaGuus carves out a space for complete composure — a space to
+        disconnect from demands and reconnect with yourself.
+        <br><br>
+        At SaunaGuus, we offer something rooted in centuries of Scandinavian tradition: the ritual of saunagus. Through
+        heat, essential oils, breathwork, and cold exposure, we guide you into release — physically, mentally, and
+        emotionally.
+        <br><br>
+        This is not about performance. It’s about presence.
+        <br><br>
+        Each session is an invitation to stop pushing, to soften, and to feel. Not a test of strength, but an act of
+        presence. Within the rising heat and biting cold, you’re forced into a parasympathetic reset: tension breaks,
+        the mind steadies, and resilience forms.
+        <br><br>
+        This is where recovery becomes ritual. Where wellness is not a luxury, but a rhythm.
+        <br><br>
+        Whether you come after a hard run, a long week, or simply to pause and draw breath — you’ll find a space that
+        welcomes your pace, your level, and your intention. Here, everyone has shelter to return to themselves.
+        <br><br>
+        At the height of heat, noise burns off, pressure evaporates — and in that clearing, something shifts.
+        <br><br>
+        Born from Scandinavian tradition. A ritual that transformed us — for the better. We’re here to share it with
+        you.
+        <br><br>
+        Contact Us
+        If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at:
+        Email: Nyc@saunaguus.io
+        Email: Ldn@saunaguus.io
+        <br><br>
+        Last updated: September 1, 2025
+      </p>
     </div>
   </div>
 
