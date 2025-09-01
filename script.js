@@ -33,9 +33,9 @@ modalSubscribe.addEventListener('click', async () => {
   // Vælg Formspree endpoint ud fra valgt projekt
   let formspreeUrl = "";
   if (currentProject === "london") {
-    formspreeUrl = "https://formspree.io/f/mzzagezo";
+    formspreeUrl = "https://formspree.io/f/xdkldzqb";
   } else if (currentProject === "newyork") {
-    formspreeUrl = "https://formspree.io/f/meolkaod";
+    formspreeUrl = "https://formspree.io/f/mqadlbro";
   } else {
     showMessage("No project chosen.");
     return;
