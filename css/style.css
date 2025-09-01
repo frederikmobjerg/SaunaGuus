@@ -96,7 +96,7 @@ body {
   flex-direction: column-reverse;
   align-items: center;
   margin-right: 50%;
-  margin-top: 30vh;
+  margin-top: 15vh;
 }
 
 .london-image {
@@ -211,11 +211,11 @@ body {
 }
 
 .about-section {
-  top: 20%;
+  top: 10%;
 }
 
 .ourspark-section {
-  top: 25%;
+  top: 15%;
 }
 
 .about,
@@ -241,7 +241,7 @@ body {
   display: block;
   margin: 32px auto 0 auto;
   text-align: center;
-  top: 35%;
+  top: 15%;
 }
 
 .logo2 img {
@@ -264,11 +264,11 @@ body {
   position: relative;
 }
 .ethos-section {
-  top: 22%;
+  top: 17%;
 }
 
 .privacy-section {
-  top: 35%;
+  top: 25%;
 }
 
 .ethos,
@@ -298,6 +298,14 @@ body {
   text-align: center;
   color: #3c303b;
   margin-top: 20vh;
+}
+
+.about-text p,
+.spark-text p,
+.ethos-text p,
+.privacy-text p {
+  margin: 0;
+  line-height: 1; /* Tilføj denne linje - 1.6 er en god læsevenlig afstand */
 }
 
 /* Utility Classes */
