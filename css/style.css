@@ -1,3 +1,11 @@
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Font Face */
 @font-face {
   font-family: "bigbird";
   src: url("fonts/TAYBigBird.otf") format("opentype");
@@ -48,28 +56,30 @@ body {
   height: 60px;
 }
 
-.brand {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-
-/* Coming Soon */
-.coming-soon {
+.logo2 {
   position: relative;
+  display: block;
+  margin: 32px auto 0 auto;
   text-align: center;
-  color: #3c303b;
-  font-size: 1.2rem;
-  margin-top: 2vh;
+  top: 15%;
+}
+
+.logo2 img {
+  height: 30px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Locations */
+.locations-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -60vh;
+}
+
 .location {
   width: 200px;
   text-align: center;
@@ -78,16 +88,6 @@ body {
 
 .location p {
   margin: 5px 0;
-}
-
-/* Locations Container */
-.locations-container {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  justify-content: space-between;
-  margin-top: -60vh;
 }
 
 .london-group {
@@ -142,6 +142,40 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
 }
 
+.info-button {
+  background: #3c303b;
+  color: #fffbea;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  position: relative;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.info-button:hover {
+  opacity: 0.8;
+}
+
+.bottom-button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 80px;
+    padding: 80px 0; /* Tilføjer 40px padding top og bottom, 0 på siderne */
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Modal */
 .modal {
   position: fixed;
@@ -155,16 +189,21 @@ body {
 
 .modal-content {
   background: #fff;
-  padding: 18px 12px;
+  padding: 32px 40px;
   border-radius: 10px;
-  min-width: 320px;
-  max-width: 90vw;
-  width: 360px;
+  width: 70vw;
+  max-width: 1000px;
+  max-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+}
+
+#infoModal {
+  z-index: 199998;
 }
 
 .modal-input {
@@ -201,6 +240,26 @@ body {
   text-decoration: underline;
 }
 
+.modal-text {
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  width: 100%;
+}
+
+.modal-close {
+  font-size: 0.9rem;
+  user-select: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modal-close:hover {
+  opacity: 0.7;
+}
+
 /* Content Sections */
 .about-section,
 .ourspark-section {
@@ -218,65 +277,32 @@ body {
   top: 15%;
 }
 
-.about,
-.ourspark {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.about p,
-.ourspark p {
-  font-weight: normal;
-  font-size: 18px;
-  letter-spacing: 2px;
-}
-
-.about-text p,
-.spark-text p {
-  margin: 0;
-}
-
-.logo2 {
-  position: relative;
-  display: block;
-  margin: 32px auto 0 auto;
-  text-align: center;
-  top: 15%;
-}
-
-.logo2 img {
-  height: 30px;
-  display: block;
-  margin: 0 auto;
-}
-
 .ethos-section {
   width: 40%;
   margin: auto;
   text-align: center;
   position: relative;
-}
-
-.privacy-section {
-  width: 40%;
-  margin: auto;
-  text-align: justify; /* Ændret fra center til justify */
-  position: relative;
-}
-.ethos-section {
   top: 17%;
 }
 
 .privacy-section {
+  width: 40%;
+  margin: auto;
+  text-align: justify;
+  position: relative;
   top: 25%;
 }
 
+.about,
+.ourspark,
 .ethos,
 .privacy {
   text-align: center;
   margin-bottom: 20px;
 }
 
+.about p,
+.ourspark p,
 .ethos p,
 .privacy p {
   font-weight: normal;
@@ -284,15 +310,19 @@ body {
   letter-spacing: 2px;
 }
 
+.about-text p,
+.spark-text p,
 .ethos-text p,
 .privacy-text p {
   margin: 0;
+  line-height: 1;
 }
 
 .privacy-text {
   text-align: justify;
 }
 
+/* Contact */
 .contact {
   position: relative;
   text-align: center;
@@ -300,20 +330,17 @@ body {
   margin-top: 20vh;
 }
 
-.about-text p,
-.spark-text p,
-.ethos-text p,
-.privacy-text p {
-  margin: 0;
-  line-height: 1; /* Tilføj denne linje - 1.6 er en god læsevenlig afstand */
+.contact a {
+  color: #3c303b;
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
 
-/* Utility Classes */
-.color-blue { color: #97bfc5; }
-.color-red { color: #c55a48; }
-.color-dark { background: #3c303b; }
-.color-cream { background: #fffbea; }
+.contact a:hover {
+  opacity: 0.7;
+}
 
+/* Custom Elements */
 .custom-message {
   position: fixed;
   top: 50%;
@@ -343,12 +370,28 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* Utility Classes */
+.color-blue { color: #97bfc5; }
+.color-red { color: #c55a48; }
+.color-dark { background: #3c303b; }
+.color-cream { background: #fffbea; }
+
 /* Mobile Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  .custom-cursor {
+    display: none;
+  }
+
+  /* Logo + brand + tagline */
   .logo {
     position: static;
-    margin: 24px auto 0 auto;
+    margin: 100px auto 0 auto;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 
@@ -356,63 +399,173 @@ body {
     height: 60px;
   }
 
-  .london-group,
+  .logo2 {
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    top: 0;
+    order: initial;
+  }
+
+  .logo2 img {
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  /* Locations */
+  .locations-container {
+    margin-top: -20vh;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .newyork-group {
     position: static;
-    margin: 32px auto;
+    margin: 60px auto 0 auto;  /* Øget top margin til 60px */
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .location {
+  .london-group {
     position: static;
-    width: 90vw;
-    font-size: 22px;
-    margin-bottom: 16px;
+    margin: 40px auto;  /* Reduced from 100px to 40px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .london-image,
   .newyork-image {
     position: static;
-    width: 70vw;
-    max-width: 300px;
-    margin-bottom: 16px;
+    width: 50vw;
+    max-width: 350px;
+    margin: 0 auto 24px auto;
     z-index: 0;
+    transform: none;
   }
 
+  /* Privacy knap container */
+  .bottom-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 60px auto;
+    padding: 40px 0;
+  }
+
+    /* Bigger buttons */
+  .subscribe,
+  .info-button {
+    font-size: 1.2rem;
+    padding: 12px 32px;
+    min-width: 160px;
+    letter-spacing: 0.15em;
+  }
+
+
+  .bottom-button-container .info-button,
+  .bottom-button-container .subscribe {
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  /* Modal */
   .modal-content {
-    min-width: 0;
-    width: 90vw;
-    padding: 12px 6px;
+    width: 95vw;
+    padding: 32px 24px;
+    max-height: 85vh;
+    margin: 20px;
   }
 
   .modal-input {
-    width: 80vw;
-    max-width: 300px;
+    width: 85vw;
+    max-width: 350px;
+    padding: 14px;
+    font-size: 1rem;
+    min-height: 20px;
+  }
+
+  .modal-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .modal-subscribe,
+  .modal-close {
+    font-size: 1.1rem;
+    padding: 10px;
+    min-height: 44px;
+  }
+
+  /* Contact */
+  .contact {
+    margin-top: 15vh;
+    margin-bottom: 30%;
+    font-size: 1.4rem;
+    padding: 0 20px;
+  }
+
+  /* Content sections */
+  .about-section,
+  .ourspark-section,
+  .ethos-section,
+  .privacy-section {
+    width: 90%;
+    padding: 0 20px;
+    top: 0;
+    margin: 40px auto;
   }
 
   .about,
   .ourspark,
   .ethos,
-  .contact,
   .privacy {
     position: static;
-    margin: 16px auto;
+    margin: 32px auto;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     left: auto;
     top: auto;
     transform: none;
   }
-}
 
-.contact a {
-    color: #3c303b;
-    text-decoration: none;
-    transition: opacity 0.2s;
-}
+  .about p,
+  .ourspark p,
+  .ethos p,
+  .privacy p {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
 
-.contact a:hover {
-    opacity: 0.7;
+  .about-text p,
+  .spark-text p,
+  .ethos-text p,
+  .privacy-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 12px 0;
+    letter-spacing: 0.5px;
+  }
+
+  /* Custom message */
+  .custom-message {
+    padding: 32px 24px;
+    font-size: 1.3rem;
+    width: 90vw;
+    max-width: 400px;
+  }
+
+  /* Intro overlay */
+  #intro-overlay img {
+    max-width: 20vw;
+    max-height: 15vh;
+  }
 }
