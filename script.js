@@ -143,3 +143,24 @@ subscribeButtons.forEach(btn => {
     modalInput.value = "";
   });
 });
+
+// ...existing code...
+
+const infoButton = document.querySelector('.info-button');
+const infoModal = document.getElementById('infoModal');
+const modalClose = document.querySelector('.modal-close');
+
+infoButton.addEventListener('click', () => {
+    infoModal.style.display = 'flex';
+});
+
+modalClose.addEventListener('click', () => {
+    infoModal.style.display = 'none';
+});
+
+// Luk modal når man klikker udenfor
+window.addEventListener('click', (event) => {
+    if (event.target === infoModal) {
+        infoModal.style.display = 'none';
+    }
+});
