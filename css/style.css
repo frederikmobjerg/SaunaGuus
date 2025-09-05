@@ -498,6 +498,19 @@ body {
     margin: 20px;
   }
 
+  #infoModal .modal-content {
+    max-height: 70vh;    /* Mindre højde end standard 85vh */
+    width: 90vw;         /* Lidt smallere */
+    padding: 24px 20px;  /* Mindre padding */
+    margin: 10px;        /* Mindre margin */
+    overflow-y: auto;    /* Behold scroll hvis indhold er for langt */
+  }
+
+  #infoModal .modal-text {
+    font-size: 1rem;     /* Lidt mindre tekst */
+    line-height: 1.6;    /* Mindre line height */
+  }  
+
   .modal-input {
     width: 60vw;          
     max-width: 250px;     
