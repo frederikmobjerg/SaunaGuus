@@ -4,8 +4,6 @@ html, body {
   overflow-x: hidden;
 }
 
-
-/* Font Face */
 @font-face {
   font-family: "bigbird";
   src: url("fonts/TAYBigBird.otf") format("opentype");
@@ -13,7 +11,6 @@ html, body {
   font-style: normal;
 }
 
-/* Base Styles */
 * {
   cursor: none !important;
 }
@@ -27,7 +24,6 @@ body {
   position: relative;
 }
 
-/* Intro Overlay */
 #intro-overlay {
   position: fixed;
   inset: 0;
@@ -45,15 +41,42 @@ body {
   object-fit: contain;
 }
 
-/* Logo */
+
 .logo {
   position: relative;
   text-align: center;
   margin-top: 10vh;
+  width: 300px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo img {
-  height: 60px;
+  width: 320px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.logo img:first-child {
+  position: absolute;
+  opacity: 1;
+}
+
+.logo img:last-child {
+  position: absolute;
+  opacity: 0;
+}
+
+.logo:hover img:first-child {
+  opacity: 0;
+}
+
+.logo:hover img:last-child {
+  opacity: 1;
 }
 
 .logo2 {
@@ -168,7 +191,7 @@ body {
     text-align: center;
     margin-top: 10%;
     margin-bottom: 80px;
-    padding: 80px 0; /* Tilføjer 40px padding top og bottom, 0 på siderne */
+    padding: 80px 0; 
     position: relative;
     z-index: 1000;
     display: flex;
@@ -176,7 +199,7 @@ body {
     align-items: center;
 }
 
-/* Modal */
+
 .modal {
   position: fixed;
   inset: 0;
@@ -275,7 +298,7 @@ body {
   opacity: 0.7;
 }
 
-/* Content Sections */
+
 .about-section,
 .ourspark-section {
   width: 40%;
@@ -326,7 +349,7 @@ body {
 }
 
 .about-text p,
-.spark-text p,
+.ourspark-text p,
 .ethos-text p,
 .privacy-text p {
   margin: 0;
@@ -337,12 +360,12 @@ body {
   text-align: justify;
 }
 
-/* Contact */
+
 .contact {
   position: relative;
   text-align: center;
   color: #3c303b;
-  margin-top: 20vh;
+  margin-top: 18vh;
 }
 
 .contact a {
@@ -355,7 +378,7 @@ body {
   opacity: 0.7;
 }
 
-/* Custom Elements */
+
 .custom-message {
   position: fixed;
   top: 50%;
@@ -385,7 +408,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Utility Classes */
+
 .color-blue { color: #97bfc5; }
 .color-red { color: #c55a48; }
 .color-dark { background: #3c303b; }
@@ -400,7 +423,6 @@ body {
     display: none;
   }
 
-  /* Logo + brand + tagline */
   .logo {
     position: static;
     margin: 100px auto 0 auto;
@@ -430,7 +452,7 @@ body {
     max-width: 80%;
   }
 
-  /* Locations */
+
   .locations-container {
     margin-top: -20vh;
     height: auto;
@@ -440,7 +462,7 @@ body {
 
   .newyork-group {
     position: static;
-    margin: 60px auto 0 auto;  /* Øget top margin til 60px */
+    margin: 60px auto 0 auto;  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,7 +470,7 @@ body {
 
   .london-group {
     position: static;
-    margin: 40px auto;  /* Reduced from 100px to 40px */
+    margin: 40px auto; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -464,7 +486,7 @@ body {
     transform: none;
   }
 
-  /* Privacy knap container */
+
   .bottom-button-container {
     width: 100%;
     display: flex;
@@ -474,7 +496,7 @@ body {
     padding: 40px 0;
   }
 
-    /* Bigger buttons */
+   
   .subscribe,
   .info-button {
     font-size: 1.2rem;
@@ -490,7 +512,7 @@ body {
     display: inline-block;
   }
 
-  /* Modal */
+  
   .modal-content {
     width: 95vw;
     padding: 32px 24px;
@@ -499,16 +521,16 @@ body {
   }
 
   #infoModal .modal-content {
-    max-height: 70vh;    /* Mindre højde end standard 85vh */
-    width: 90vw;         /* Lidt smallere */
-    padding: 24px 20px;  /* Mindre padding */
-    margin: 10px;        /* Mindre margin */
-    overflow-y: auto;    /* Behold scroll hvis indhold er for langt */
+    max-height: 70vh;    
+    width: 90vw;         
+    padding: 24px 20px;  
+    margin: 10px;        
+    overflow-y: auto;    
   }
 
   #infoModal .modal-text {
-    font-size: 1rem;     /* Lidt mindre tekst */
-    line-height: 1.6;    /* Mindre line height */
+    font-size: 1rem;     
+    line-height: 1.6;    
   }  
 
   .modal-input {
@@ -532,7 +554,7 @@ body {
     min-height: 44px;
   }
 
-  /* Contact */
+  
   .contact {
     margin-top: 15vh;
     margin-bottom: 30%;
@@ -540,7 +562,7 @@ body {
     padding: 0 20px;
   }
 
-  /* Content sections */
+
   .about-section,
   .ourspark-section,
   .ethos-section,
@@ -574,7 +596,7 @@ body {
   }
 
   .about-text p,
-  .spark-text p,
+  .ourspark-text p,
   .ethos-text p,
   .privacy-text p {
     font-size: 18px;
@@ -583,7 +605,7 @@ body {
     letter-spacing: 0.5px;
   }
 
-  /* Custom message */
+  
   .custom-message {
     padding: 32px 24px;
     font-size: 1.3rem;
@@ -591,7 +613,7 @@ body {
     max-width: 400px;
   }
 
-  /* Intro overlay */
+  
   #intro-overlay img {
     max-width: 20vw;
     max-height: 15vh;
