@@ -3,25 +3,25 @@ const subscribeButtons = document.querySelectorAll('.subscribe');
 const modalSubscribe = document.querySelector('.modal-subscribe');
 const modalInput = document.querySelector('.modal-input');
 
-let currentProject = null; // husker hvilken knap der blev trykket
+let currentProject = null;
 
-// Åbn modal og gem hvilket projekt
+
 subscribeButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    currentProject = btn.getAttribute('data-project'); // fx "london" eller "newyork"
+    currentProject = btn.getAttribute('data-project'); 
     modal.style.display = 'flex';
     modalInput.value = "";
   });
 });
 
-// Luk modal når man klikker udenfor
+
 window.addEventListener('click', (event) => {
   if (event.target === modal) {
     modal.style.display = 'none';
   }
 });
 
-// SUBMIT-knap
+
 modalSubscribe.addEventListener('click', async () => {
   const email = modalInput.value.trim();
 
@@ -30,7 +30,7 @@ modalSubscribe.addEventListener('click', async () => {
     return;
   }
 
-  // Vælg Formspree endpoint ud fra valgt projekt
+
   let formspreeUrl = "";
   if (currentProject === "london") {
     formspreeUrl = "https://formspree.io/f/xdkldzeq";
@@ -49,7 +49,7 @@ modalSubscribe.addEventListener('click', async () => {
     });
 
     if (res.ok) {
-      modal.style.display = 'none'; // LUK FØRST
+      modal.style.display = 'none';
       modalInput.value = "";
       showMessage(`Thank you! You are now subscribed to ${currentProject}`);
     } else {
@@ -63,7 +63,7 @@ modalSubscribe.addEventListener('click', async () => {
   }
 });
 
-// Placeholder-effekt (valgfrit)
+
 modalInput.addEventListener('focus', () => {
   modalInput.placeholder = '';
 });
@@ -85,18 +85,18 @@ window.addEventListener('DOMContentLoaded', () => {
     overlay.style.opacity = 0;
     setTimeout(() => {
       overlay.style.display = 'none';
-    }, 1200); // matcher transition-tiden
-  }, 1800); // hvor længe introen vises (ms)
+    }, 1200);
+  }, 1800);
 });
 
 function showMessage(msg) {
   const msgBox = document.getElementById('custom-message');
   msgBox.textContent = msg;
   msgBox.style.display = 'block';
-  msgBox.style.zIndex = '10000'; // sikrer at den er ovenpå modal
-  msgBox.style.opacity = '1'; // hvis du bruger fade senere
+  msgBox.style.zIndex = '10000'; 
+  msgBox.style.opacity = '1'; 
 
-  // Skjul efter 3 sekunder
+
   setTimeout(() => {
     msgBox.style.display = 'none';
   }, 3000);
@@ -112,9 +112,9 @@ document.addEventListener('mousemove', e => {
 
 document.addEventListener('click', () => {
   if (isRed) {
-    cursor.style.background = '#97bfc5'; // blå
+    cursor.style.background = '#97bfc5';
   } else {
-    cursor.style.background = '#c55a48'; // rød
+    cursor.style.background = '#c55a48';
   }
   isRed = !isRed;
 });
@@ -137,14 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 subscribeButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log('Project:', btn.getAttribute('data-project')); // Debug
+    console.log('Project:', btn.getAttribute('data-project'));
     currentProject = btn.getAttribute('data-project');
     modal.style.display = 'flex';
     modalInput.value = "";
   });
 });
-
-// ...existing code...
 
 const infoButton = document.querySelector('.info-button');
 const infoModal = document.getElementById('infoModal');
@@ -158,7 +156,6 @@ modalClose.addEventListener('click', () => {
     infoModal.style.display = 'none';
 });
 
-// Luk modal når man klikker udenfor
 window.addEventListener('click', (event) => {
     if (event.target === infoModal) {
         infoModal.style.display = 'none';
