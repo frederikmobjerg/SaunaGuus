@@ -434,6 +434,17 @@ body {
 
   .logo img {
     height: 60px;
+    position: static;
+    opacity: 1;
+    transition: none; 
+  }
+
+   .logo:hover img:first-child {
+    opacity: 1;
+  }
+
+  .logo:hover img:last-child {
+    display: none;
   }
 
   .logo2 {
@@ -618,4 +629,15 @@ body {
     max-width: 20vw;
     max-height: 15vh;
   }
+
+   .logo img:last-child {
+    display: none;  /* Skjuler UUU logoet på mobil */
+  }
+
+  /* Juster hovedlogoet når UUU er skjult */
+  .logo img:first-child {
+    position: static;
+    opacity: 1;
+  }
+
 }
